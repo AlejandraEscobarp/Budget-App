@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>BudgetApp</title>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/budget.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css"> 
+
+</head>
+
+    
+<body>
+
+<div class="container"> 
+ <div class="row">
+            <div class="col-10">
+              <h3 class="text-dark">Presupuesto de Marzo 2021</h3>
+               <!-- Creacion de botones Ingresos/Egresos --> 
+              <button type="button" class=" btn btn-dark" style="width: 100px;">INGRESOS: </button>
+                <br>
+                <br>
+              <button type="button" class="btn btn-dark" style="width: 100px;">EGRESOS: </button>    
+             </div> 
+     
+            <!--Formulario Transacciones-->     
+            <div class="row bg-light">
+                        <div class="col-14 col-sm-5 text-center">
+                          <p class="text-tittle">Transacción</p>
+
+                            <form class="formulario-transacciones" style="max-width: 500px; margin:auto;" >
+                            <select name="transaccion" id="transacciones" class="form-controles">
+                              <option value="Ingresos-Egresos" placeholder="Ingresos|Egresos"></option>
+                              <option value="ingreso">Ingreso</option>
+                              <option value="egreso">Egreso</option>
+                            </select> 
+                            <br>
+               
+                 <!--Vista Ingresos/Egresos-->       
+                <input type="text" placeholder="Descripción" class="form-controles" id="descripcion" name="descripcion" required>
+                <input type="number" placeholder="Monto" class="form-controles" id="monto" name="monto">
+              </form>
+              <button class="bttn" id="agregar">Agregar</button>
+            </div>    
+            <div class="col-14 col-sm-7 text-center">
+              <ul class="nav nav-tabs">
+                <li class="nav-item" id="nav-item-ingreso">
+                  <a class="nav-link active text-info" data-toggle="tab" id="nav-ingresos">Ingresos</a>
+                </li>
+                <li class="nav-item" id="nav-item-egreso">
+                  <a class="nav-link" data-toggle="tab" id="nav-egresos">Egresos</a>
+                </li>
+              </ul>
+              <div id="Detalle" class="tab-content">
+                <div class="tab-pane active" id="ingresos-detalle"></div>
+                <div class="tab-pane" id="egresos-detalle"></div>
+              </div>
+            </div>
+            </div> 
+       
+</div>     
+     
+</body>   
+    
+    
+    
+    
+    
+    
+</html>
